@@ -11,23 +11,24 @@
 # * param1: url of the prod server which is to be monitored
 # * param2: absolute path of the log file directory
 # * param3: name of the log file present within $param2
-PROD_ACCESS_USERNAME="sn470454"
-PROD_ACCESS_PWD="SkSkSk88"
+PROD_LOG_FILE=${1:-'por_c0001413.log'}
+PROD_ACCESS_USERNAME=${2:-"sn470454"}
+PROD_ACCESS_PWD=${3:-"SkSkSk88"}
 
 # Default prod settings if no positional arguments are supplied
-PROD_URL=${3:-'c0001413.prod.cloud.fedex.com'}
-PROD_LOG_DIR=${4:-'/var/fedex/por/logs/weblogic'}
-PROD_LOG_FILE=${5:-'por_c0001413.log'}
+PROD_URL=${4:-'c0001413.prod.cloud.fedex.com'}
+PROD_LOG_DIR=${5:-'/var/fedex/por/logs/weblogic'}
 
 # temp directory to hold the log
 LOG_TMP_DIR='tmp'
 
 echo -e "\n **Prod monitor script started**"
 
+echo " Admin user: $PROD_ACCESS_USERNAME"
 echo " Monitor server: $PROD_URL"
 echo " Monitor directory: $PROD_LOG_DIR/$PROD_LOG_FILE"
 echo -e " *******************************\n"
-        
+exit
 # If this dir exists, then a log is in process. 
 if [ -d $LOG_TMP_DIR ]
     then
