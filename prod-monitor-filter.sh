@@ -3,7 +3,7 @@
 # <description>
 #
 # Usage:
-#  $ ./prod-monitor-filter [maxLogsPerDay] [month] [date] [year] [prod-log-file-local]
+#  $ ./prod-monitor-filter [- l maxLogsPerDay] [- m month] [-d date] [-y year] [-p prod-log-file-local]
 # * maxLogsPerDay: How many logs do you need per day
 # * month: Month for which logs need
 # * date: date for which logs need to be created in the given month
@@ -11,13 +11,50 @@
 # * prod-log-file-local: local copy of the latest prod logs
 
 # Find current date, month and time, if not passed in as params.
-MAX_LOGS_PER_DAY=${1:-'2'}
-CUR_MONTH=${2:-` date | awk '{print \$2}' | sed 's/,//' `}
-CUR_DATE_MONTH=${3:-` date | awk '{print \$3}' | sed 's/,//' `}
-IS_DATE_SET=${3:-"0"}
-CUR_YEAR=${4:-`date | awk '{print \$4}' | sed 's/,//' `}
+MAX_LOGS_PER_DAY='2'
+CUR_MONTH=` date | awk '{print \$2}' | sed 's/,//' `
+CUR_DATE_MONTH=` date | awk '{print \$3}' | sed 's/,//' `
+IS_DATE_SET='0'
+CUR_YEAR=`date | awk '{print \$4}' | sed 's/,//' `
 PROD_LOG_FILE='tmp/por_c0001413.log'
 LOG_LOCAL_HISTORY_FILE="archived-$CUR_MONTH-$CUR_YEAR.log"
+
+# Helpful indication for the user to use the script properly
+# -l log
+# -d date
+# -m month
+# -y year
+# -p prod
+function usage(){
+    echo -e "Usage: $0 [-l <maxlogs-per-day:number>] [-m <month:number>] [-d <date:number>] " 
+    echo -e " [-y <year:number>] [-p <log-file:string>] "
+    exit 1;
+}
+
+# Parse for the  getopt
+while getopts ":l:m:d:y:p" opt; do
+  case $opt in
+    l)
+        MAX_LOGS_PER_DAY=${OPTARG}
+      ;;
+    m)
+        CUR_MONTH=${OPTARG}
+      ;;
+    d)
+        CUR_DATE_MONTH=${OPTARG}
+        IS_DATE_SET=1
+      ;;
+    y)
+        CUR_YEAR=${OPTARG}
+      ;;
+    p)
+        PROD_LOG_FILE=${OPTARG}
+      ;;
+    \?)
+      usage
+      ;;
+  esac
+done
 
    
 # Get max number of days for a month: $1
@@ -56,7 +93,7 @@ function fetchLogsForDate(){
     elif [ $NUMINSTANCES -lt $MAX_LOGS_PER_DAY ]
         then
             LEFTOVER_LOG_COUNT=`expr $MAX_LOGS_PER_DAY - $NUMINSTANCES`
-            echo -e " Need to fetch $LEFTOVER_LOG_COUNT more log/s for $MONTH_DATE_TEXT"
+            # echo -e " Need to fetch $LEFTOVER_LOG_COUNT more log/s for $MONTH_DATE_TEXT"
             # fetch all health logs from prod logs by date
             fetchDesiredNumberOfLogsFromProd $LEFTOVER_LOG_COUNT "$MONTH_DATE_TEXT"
     fi

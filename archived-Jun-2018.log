@@ -1,2 +1,54 @@
-Jun 3,
-Jun 1,
+
+ **Prod monitor script started**
+ Admin user: sn470454
+ Monitor server: c0001413.prod.cloud.fedex.com
+ Monitor directory: /var/fedex/por/logs/weblogic/por_c0001413.log
+ *******************************
+
+ Previous instance found.
+ Cleaning directory tmp
+ Created tmp directory
+
+ System up and running as of Thu Jun  7 11:26:09 GMT 2018
+
+ Trying to scp log file into the output log directory
+ Successfully downloaded the log file
+
+ Displaying log results 
+ Found prod log file at tmp/por_c0001413.log
+ Local log present. Further logs will be appended
+
+ Checking logs for Jun 2018 uptil current date
+******************
+ Jun 1, 2018 11:26:23 AM GMT	37% of the total memory in the server is free. 
+ Jun 1, 2018 12:47:37 PM GMT	13% of the total memory in the server is free. 
+
+******************
+ Jun 2, 2018 11:00:46 AM GMT	38% of the total memory in the server is free. 
+ Jun 2, 2018 11:22:19 PM GMT	51% of the total memory in the server is free. 
+
+******************
+ Jun 3, 2018 9:37:35 AM GMT	47% of the total memory in the server is free. 
+ Jun 3, 2018 8:31:35 PM GMT	31% of the total memory in the server is free. 
+
+******************
+ Jun 4, 2018 8:10:53 AM GMT	50% of the total memory in the server is free. 
+ Jun 4, 2018 3:43:10 PM GMT	58% of the total memory in the server is free. 
+
+******************
+ Jun 5, 2018 7:31:11 AM GMT	22% of the total memory in the server is free. 
+ Jun 5, 2018 1:35:11 PM GMT	57% of the total memory in the server is free. 
+
+******************
+ Jun 6, 2018 2:30:11 AM GMT	70% of the total memory in the server is free. 
+ Jun 6, 2018 5:38:11 PM GMT	36% of the total memory in the server is free. 
+
+******************
+ Jun 7, 2018 1:26:11 AM GMT	35% of the total memory in the server is free. 
+ 
+
+******************
+ Size of /opt/fedex: 55%
+ Size of /var/fedex: 57%
+ CPU Usage as reported on the server:  2.5%
+
