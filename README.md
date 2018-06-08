@@ -3,11 +3,11 @@
 - - - -
 
 #### Motivation: ####
-    *To automate the monotonous task of monitoring the logs from a production/test server.*
-    *SSHing into the remote server eats up valuable time and resources*
-    *Basic commands such as df, top, etc can be easily appended to the script.*
-    *Filtering of logs using sed, awk and grep to only get the required information.*
-    *Force Redownloading the logs when necessary*
+    To automate the monotonous task of monitoring the logs from a production/test server.
+    SSHing into the remote server eats up valuable time and resources
+    Basic commands such as df, top, etc can be easily appended to the script.
+    Filtering of logs using sed, awk and grep to only get the required information.
+    Force Redownloading the logs when necessary
 
 This project consistd of two scripts each of which takes in appropriate arguments as denoted by its usage pattern.
 
@@ -17,13 +17,13 @@ This project consistd of two scripts each of which takes in appropriate argument
 ```
 $ ./prod-monitor.sh [-u user] [-p pwd] [-f force-refresh] [-l logs-per-day] [- m month] [-d date] [-y year]
    
-# * -u user: user having access to the prod system
-# * -p passwd: passwd of the user having access to the prod system
-# * -f force-refresh: specify if logs have to be pulled from scratch
-# * -l maxLogsPerDay: How many logs do you need per day
-# * -m month: Month for which logs need
-# * -d date: date for which logs need to be created in the given month
-# * -y year: Year for which logs need to be created
+# -u user: user having access to the prod system
+# -p passwd: passwd of the user having access to the prod system
+# -f force-refresh: specify if logs have to be pulled from scratch
+# -l maxLogsPerDay: How many logs do you need per day
+# -m month: Month for which logs need
+# -d date: date for which logs need to be created in the given month
+# -y year: Year for which logs need to be created
 ```
 - - - -
 
