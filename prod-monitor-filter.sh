@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# <description>
-#
+# <Loggin Filter Script>
+# <Author: Aman Garg>
+# <Date: 05 Jun 2018>
+# Subsidiary of the initial logging script that helps to filter the logs based on certain params
 # Usage:
 #  $ ./prod-monitor-filter [- l maxLogsPerDay] [- m month] [-d date] [-y year] [-p prod-log-file-local]
 # * maxLogsPerDay: How many logs do you need per day
@@ -10,49 +12,46 @@
 # * year: Year for which logs need to be created
 # * prod-log-file-local: local copy of the latest prod logs
 
-# Find current date, month and time, if not passed in as params.
+# Find current date, month and time, if not passed in as options.
 MAX_LOGS_PER_DAY='2'
 CUR_MONTH=` date | awk '{print \$2}' | sed 's/,//' `
 CUR_DATE_MONTH=` date | awk '{print \$3}' | sed 's/,//' `
 IS_DATE_SET='0'
 CUR_YEAR=`date | awk '{print \$4}' | sed 's/,//' `
-PROD_LOG_FILE='tmp/por_c0001413.log'
-LOG_LOCAL_HISTORY_FILE="archived-$CUR_MONTH-$CUR_YEAR.log"
+PROD_LOG_FILE_LOCATION='tmp/por_c0001413.log'
+LOCAL_LOG_TMP_DIR='log'
+LOG_LOCAL_HISTORY_FILE="$LOCAL_LOG_TMP_DIR/archived-$CUR_MONTH-$CUR_YEAR.log"
 
 # Helpful indication for the user to use the script properly
-# -l log
+# -l max logs per day
 # -d date
 # -m month
 # -y year
-# -p prod
+# -e prod
 function usage(){
     echo -e "Usage: $0 [-l <maxlogs-per-day:number>] [-m <month:number>] [-d <date:number>] " 
-    echo -e " [-y <year:number>] [-p <log-file:string>] "
+    echo -e " [-y <year:number>] [-e <log-file:string>] "
     exit 1;
 }
 
 # Parse for the  getopt
-while getopts ":l:m:d:y:p" opt; do
+while getopts ":e:l:m:d:y" opt; do
   case $opt in
     l)
-        MAX_LOGS_PER_DAY=${OPTARG}
-      ;;
+        MAX_LOGS_PER_DAY=${OPTARG};;
     m)
         CUR_MONTH=${OPTARG}
-      ;;
+        LOG_LOCAL_HISTORY_FILE="$LOCAL_LOG_TMP_DIR/archived-$CUR_MONTH-$CUR_YEAR.log";;
     d)
         CUR_DATE_MONTH=${OPTARG}
-        IS_DATE_SET=1
-      ;;
+        IS_DATE_SET='1'
+        LOG_LOCAL_HISTORY_FILE="$LOCAL_LOG_TMP_DIR/archived-$CUR_MONTH-$CUR_YEAR.log";;
     y)
-        CUR_YEAR=${OPTARG}
-      ;;
-    p)
-        PROD_LOG_FILE=${OPTARG}
-      ;;
+        CUR_YEAR=${OPTARG};;
+    e)
+        PROD_LOG_FILE_LOCATION="${OPTARG}";;
     \?)
-      usage
-      ;;
+        usage;;
   esac
 done
 
@@ -108,8 +107,8 @@ function fetchDesiredNumberOfLogsFromProd(){
     _MONTH_DATE_TEXT=$2
     AM_LOG_COUNT=`expr $_REQ_LOGS / 2`
     PM_LOG_COUNT=`expr $_REQ_LOGS - $AM_LOG_COUNT`
-    AM_LOGS=`cat $PROD_LOG_FILE | grep -i ".*$_MONTH_DATE_TEXT.*<Info> <Health>" | sed -rn "s/.*($_MONTH_DATE_TEXT.*AM GMT).*<([0-9]+.*)>/\1\t\2/p" | shuf -n $AM_LOG_COUNT`
-    PM_LOGS=`cat $PROD_LOG_FILE | grep -i ".*$_MONTH_DATE_TEXT.*<Info> <Health>" | sed -rn "s/.*($_MONTH_DATE_TEXT.*PM GMT).*<([0-9]+.*)>/\1\t\2/p" | shuf -n $PM_LOG_COUNT`
+    AM_LOGS=`cat $PROD_LOG_FILE_LOCATION | grep -i ".*$_MONTH_DATE_TEXT.*<Info> <Health>" | sed -rn "s/.*($_MONTH_DATE_TEXT.*AM GMT).*<([0-9]+.*)>/\1\t\2/p" | shuf -n $AM_LOG_COUNT`
+    PM_LOGS=`cat $PROD_LOG_FILE_LOCATION | grep -i ".*$_MONTH_DATE_TEXT.*<Info> <Health>" | sed -rn "s/.*($_MONTH_DATE_TEXT.*PM GMT).*<([0-9]+.*)>/\1\t\2/p" | shuf -n $PM_LOG_COUNT`
     echo -e " $AM_LOGS\n $PM_LOGS\n"
 }
 
@@ -128,39 +127,34 @@ function fetchLogsForMonth(){
     if [ $IS_DATE_SET -eq '0' ]
         then
             echo -e " Checking logs for $_MONTH $CUR_YEAR uptil current date"
-            echo -e "******************"
+            echo -e " ******************"
             for i in $(seq 1 $_DATE_TO_LOOP)
                 do
                     fetchLogsForDate $_MONTH $i
-                echo -e "******************"
+                echo -e " ******************"
             done
     else    
         echo -e " Checking logs for $_MONTH $CUR_DATE_MONTH $CUR_YEAR"
-        echo -e "******************"
+        echo -e " ******************"
         fetchLogsForDate $_MONTH $CUR_DATE_MONTH
     fi
 }
 
 # if current log doesn't exist, exit
-if [ ! -f $PROD_LOG_FILE ]
+if [ ! -f $PROD_LOG_FILE_LOCATION ]
     then
-        echo " Prod log file $PROD_LOG_FILE is missing"
+        echo " Prod log file $PROD_LOG_FILE_LOCATION is missing"
         exit 1
-    else
-        echo " Found prod log file at $PROD_LOG_FILE"
+    # else echo " Found prod log file at $PROD_LOG_FILE_LOCATION"
 fi
 
 # if history exists, good else create it
-if [ -f $LOG_LOCAL_HISTORY_FILE ]
+if [ ! -f $LOG_LOCAL_HISTORY_FILE ]
     then
-        echo " Local log present. Further logs will be appended"
-    else
         echo " Local log archive absent. Creating $LOG_LOCAL_HISTORY_FILE"
         touch $LOG_LOCAL_HISTORY_FILE
 fi
 
 # for each day of month m, i, from 1 till today, check the number of instances of m i
-
 echo
 fetchLogsForMonth $CUR_MONTH
-exit
