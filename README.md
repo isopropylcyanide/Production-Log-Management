@@ -3,11 +3,11 @@
 - - - -
 
 #### Motivation: ####
-    To automate the monotonous task of monitoring the logs from a production/test server. 
-    SSHing into the remote server eats up valuable time and resources
-    Basic commands such as df, top, etc can be easily appended to the script.
-    Filtering of logs using sed, awk and grep to only get the required information.
-    
+    *To automate the monotonous task of monitoring the logs from a production/test server.*
+    *SSHing into the remote server eats up valuable time and resources*
+    *Basic commands such as df, top, etc can be easily appended to the script.*
+    *Filtering of logs using sed, awk and grep to only get the required information.*
+    *Force Redownloading the logs when necessary*
 
 This project consistd of two scripts each of which takes in appropriate arguments as denoted by its usage pattern.
 
@@ -30,7 +30,7 @@ $ ./prod-monitor.sh [-u user] [-p pwd] [-f force-refresh] [-l logs-per-day] [- m
  ### Usage scenarios ###
  *To fetch logs for Jun 7*
  ```
- $ ./prod-monitor.sh -d 5 -m Jun
+ $ ./prod-monitor.sh -f 1 -d 5 -m Jun
      ******************
      Production log monitor script started
      Admin user: sn470454
@@ -57,7 +57,7 @@ $ ./prod-monitor.sh [-u user] [-p pwd] [-f force-refresh] [-l logs-per-day] [- m
  
  *To fetch logs for entire Jun given the current date is 7th June*
  ```
- $ ./prod-monitor-filter.sh -m Jun 
+ $ ./prod-monitor-filter.sh -f 1 -m Jun 
 
      Checking logs for Jun 2018 uptil current date
      ******************
