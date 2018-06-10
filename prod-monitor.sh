@@ -45,13 +45,14 @@ LOG_LOCAL_HISTORY_FILE="$LOCAL_LOG_TMP_DIR/archived-$CUR_MONTH-$CUR_YEAR.log"
 # -d date
 # -m month
 # -y year
+# -h help
 function usage(){
     echo -e "Usage: $0 [-u <username:string>] [-p <passwd:string>] [-f <force-refresh:1/0>] [-l <maxlogs-per-day:number>] [-m <month:number>] [-d <date:number>] " 
     echo -e " [-y <year:number>]"
     exit 1;
 }
 # Parse for the  getopt
-while getopts ":u:p:f:l:m:d:y" opt; do
+while getopts ":u:p:f:l:m:d:y:h" opt; do
   case $opt in
     u)
         PROD_ACCESS_USERNAME=${OPTARG};;
@@ -70,8 +71,12 @@ while getopts ":u:p:f:l:m:d:y" opt; do
         IS_DATE_SET='1';;
     y)
         CUR_YEAR=${OPTARG};;
-    \?)
+    h)
         usage;;
+    \?)
+        echo -e "Invalid argument specified."
+        echo -e "Type $0 -h to view help"
+        exit 1;;
   esac
 done
 
@@ -143,7 +148,7 @@ echo -e " Size of $VAR_FEDEX_DIR: $VAR_FEDEX_SIZE"
 echo -e " Size of $VAR_FEDEX_DIR: $VAR_FEDEX_SIZE" >> $LOG_LOCAL_HISTORY_FILE
 
 # Report the cpu used by the process java
-CPU_USAGE_CMD=" ps -p \$(pgrep java | awk NR==1) -o %cpu | awk NR==2 | awk '{print $1}' "
+CPU_USAGE_CMD=" top -b -n2 | grep java | tail -n 1 | awk '{print \$9}' "
 CPU_USAGE=$(sshpass -p $PROD_ACCESS_PWD ssh -o StrictHostKeyChecking=no $PROD_ACCESS_USERNAME@$PROD_URL $CPU_USAGE_CMD 2>&1)
 echo -e " CPU Usage as reported on the server: $CPU_USAGE%\n"
 echo -e " CPU Usage as reported on the server: $CPU_USAGE%\n"  >> $LOG_LOCAL_HISTORY_FILE
