@@ -78,39 +78,21 @@ function getmaxDaysForMonth(){
 }
 
 # Fetch logs for a particular for month:$1 and date:$2 
-# If the num instances is 0, fill two more logs preferably separated by 10 or more hours
-# If the num instances is 1, fill one more logs preferably separated by 10 or more hours
-# If the num instances is 2, continue
-function fetchLogsForDate(){
-    _MONTH=$1
-    _DATE=$2
-    MONTH_DATE_TEXT="$_MONTH $_DATE,"
-    NUMINSTANCES=`grep -c "$MONTH_DATE_TEXT" $LOG_LOCAL_HISTORY_FILE`
-    if [ $NUMINSTANCES -ge $MAX_LOGS_PER_DAY ]
-        then
-            echo " Logs already filled for $MONTH_DATE_TEXT"
-    elif [ $NUMINSTANCES -lt $MAX_LOGS_PER_DAY ]
-        then
-            LEFTOVER_LOG_COUNT=`expr $MAX_LOGS_PER_DAY - $NUMINSTANCES`
-            # echo -e " Need to fetch $LEFTOVER_LOG_COUNT more log/s for $MONTH_DATE_TEXT"
-            # fetch all health logs from prod logs by date
-            fetchDesiredNumberOfLogsFromProd $LEFTOVER_LOG_COUNT "$MONTH_DATE_TEXT"
-    fi
-}
-
-
 # CRUX OF The APPLICATION: MODIFY the log return Algorithm to persist data as reqd
 # Fetch desired number of logs: $1 matching the text: $2
 # Get both logs in AM/PM with priority of PM over AM if only one is required
-function fetchDesiredNumberOfLogsFromProd(){
-    _REQ_LOGS=$1
-    _MONTH_DATE_TEXT=$2
+function fetchLogsForDate(){
+    _MONTH=$1
+    _DATE=$2
+    _MONTH_DATE_TEXT="$_MONTH $_DATE,"
+    _REQ_LOGS=$MAX_LOGS_PER_DAY
     AM_LOG_COUNT=`expr $_REQ_LOGS / 2`
     PM_LOG_COUNT=`expr $_REQ_LOGS - $AM_LOG_COUNT`
     AM_LOGS=`cat $PROD_LOG_FILE_LOCATION | grep -i ".*$_MONTH_DATE_TEXT.*<Info> <Health>" | sed -rn "s/.*($_MONTH_DATE_TEXT.*AM GMT).*<([0-9]+.*)>/\1\t\2/p" | shuf -n $AM_LOG_COUNT`
     PM_LOGS=`cat $PROD_LOG_FILE_LOCATION | grep -i ".*$_MONTH_DATE_TEXT.*<Info> <Health>" | sed -rn "s/.*($_MONTH_DATE_TEXT.*PM GMT).*<([0-9]+.*)>/\1\t\2/p" | shuf -n $PM_LOG_COUNT`
     echo -e " $AM_LOGS\n $PM_LOGS\n"
 }
+
 
 # Fetch logs for a particular month:$1
 # If month specified has occured before, loop till the entirety of its days
