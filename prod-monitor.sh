@@ -20,8 +20,20 @@
 PROD_LOG_FILE='por_c0001413.log'
 # Local archive of all logs on which processing is done
 PROD_LOG_ARCHIVE_FILE='por_c0001413_arch.log'
-PROD_ACCESS_USERNAME="sn470454"
-PROD_ACCESS_PWD="SkSkSk88"
+PROD_ACCESS_USERNAME='sn470454'
+PROD_ACCESS_PWD_FILE='prod-password'
+
+# If not specified, please add password in a file called prod-password
+if [ ! -f $PROD_ACCESS_PWD_FILE ]
+    then
+        echo -e " *******************************"
+        echo -e " Please provide a password file titled $PROD_ACCESS_PWD_FILE "
+        echo -e ' Terminating because password file was not specified.'
+        echo -e " *******************************"
+        exit -1
+    else 
+        PROD_ACCESS_PWD=$(cat $PROD_ACCESS_PWD_FILE 2>&1)
+fi
 
 # Default prod settings if no positional arguments are supplied
 PROD_URL='c0001413.prod.cloud.fedex.com'
@@ -85,7 +97,7 @@ done
 
 echo -e " *******************************"
 echo -e " Production log monitor script started"
-echo " Admin user: $PROD_ACCESS_USERNAME"
+echo " Admin user: $PROD_ACCESS_USERNAME/$PROD_ACCESS_PWD"
 echo " Monitor server: $PROD_URL"
 echo " Monitor directory: $PROD_LOG_DIR/$PROD_LOG_FILE"
 echo " Log month: $CUR_MONTH/$CUR_YEAR"
@@ -123,7 +135,7 @@ fi
 
 # By now the most recent log is at $PROD_LOG_LATEST_LOCAL. These contents should be merged with the
 # $PROD_LOG_ARCHIVE_FILE for further processing.
-if [ -f $PROD_LOG_FILE_LOCAL_ARCHIVE ]
+if [ -f $PROD_LOG_FILE_LOCAL_ARCHIVE ] && [ $FORCE_REFRESH -ne '0' ]
     then
         echo -e " Merging $PROD_LOG_FILE_LOCAL into $PROD_LOG_FILE_LOCAL_ARCHIVE"
         cat $PROD_LOG_FILE_LOCAL >> $PROD_LOG_FILE_LOCAL_ARCHIVE

@@ -260,3 +260,365 @@ java.lang.NullPointerException
 java.lang.NullPointerException
 java.lang.NullPointerException
 
+
+ Checking logs for Jul 2 
+ ******************
+ 
+ Jul 2, 2018 10:33:37 PM GMT	24% of the total memory in the server is free. 
+Jul 2, 2018 4:29:37 PM GMT	20% of the total memory in the server is free. 
+Jul 2, 2018 5:23:37 PM GMT	39% of the total memory in the server is free. 
+Jul 2, 2018 11:08:37 PM GMT	67% of the total memory in the server is free. 
+Jul 2, 2018 6:49:37 PM GMT	34% of the total memory in the server is free. 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+ CPU Usage as reported on the server: 3.0%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
+
+ Checking logs for Jul 1 
+ ******************
+ 
+ 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+ CPU Usage as reported on the server: 3.3%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
+
+ Checking logs for Jul  uptil current date
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jul 2, 2018 8:33:37 PM GMT	40% of the total memory in the server is free. 
+Jul 2, 2018 8:23:37 PM GMT	62% of the total memory in the server is free. 
+Jul 2, 2018 8:53:37 PM GMT	35% of the total memory in the server is free. 
+Jul 2, 2018 3:53:37 PM GMT	50% of the total memory in the server is free. 
+Jul 2, 2018 11:38:37 PM GMT	40% of the total memory in the server is free. 
+
+ ******************
+ Jul 3, 2018 11:06:45 AM GMT	29% of the total memory in the server is free. 
+Jul 3, 2018 10:32:45 AM GMT	13% of the total memory in the server is free. 
+Jul 3, 2018 3:43:37 AM GMT	42% of the total memory in the server is free. 
+Jul 3, 2018 8:28:38 AM GMT	35% of the total memory in the server is free. 
+Jul 3, 2018 9:25:38 AM GMT	21% of the total memory in the server is free. 
+ Jul 3, 2018 12:04:45 PM GMT	42% of the total memory in the server is free. 
+Jul 3, 2018 12:07:45 PM GMT	26% of the total memory in the server is free. 
+Jul 3, 2018 12:01:45 PM GMT	62% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+
+ Checking logs for Jul  uptil current date
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jul 2, 2018 4:22:37 PM GMT	20% of the total memory in the server is free. 
+Jul 2, 2018 10:10:37 PM GMT	34% of the total memory in the server is free. 
+Jul 2, 2018 4:56:37 PM GMT	20% of the total memory in the server is free. 
+Jul 2, 2018 3:59:37 PM GMT	69% of the total memory in the server is free. 
+Jul 2, 2018 6:06:37 PM GMT	30% of the total memory in the server is free. 
+
+ ******************
+ Jul 3, 2018 6:36:37 AM GMT	19% of the total memory in the server is free. 
+Jul 3, 2018 3:09:37 AM GMT	53% of the total memory in the server is free. 
+Jul 3, 2018 3:50:37 AM GMT	57% of the total memory in the server is free. 
+Jul 3, 2018 12:44:37 AM GMT	47% of the total memory in the server is free. 
+Jul 3, 2018 6:10:37 AM GMT	39% of the total memory in the server is free. 
+ Jul 3, 2018 12:01:45 PM GMT	62% of the total memory in the server is free. 
+Jul 3, 2018 12:13:45 PM GMT	15% of the total memory in the server is free. 
+Jul 3, 2018 12:07:45 PM GMT	26% of the total memory in the server is free. 
+Jul 3, 2018 12:04:45 PM GMT	42% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+ CPU Usage as reported on the server: 3.3%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
+
+ Checking logs for Jul  uptil current date
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jul 2, 2018 6:18:37 PM GMT	68% of the total memory in the server is free. 
+Jul 2, 2018 6:26:37 PM GMT	34% of the total memory in the server is free. 
+Jul 2, 2018 11:48:37 PM GMT	65% of the total memory in the server is free. 
+Jul 2, 2018 7:02:37 PM GMT	68% of the total memory in the server is free. 
+Jul 2, 2018 7:44:37 PM GMT	63% of the total memory in the server is free. 
+
+ ******************
+ Jul 3, 2018 3:30:37 AM GMT	54% of the total memory in the server is free. 
+Jul 3, 2018 11:37:45 AM GMT	48% of the total memory in the server is free. 
+Jul 3, 2018 5:51:37 AM GMT	61% of the total memory in the server is free. 
+Jul 3, 2018 2:57:37 AM GMT	64% of the total memory in the server is free. 
+Jul 3, 2018 12:24:37 AM GMT	37% of the total memory in the server is free. 
+ Jul 3, 2018 12:04:45 PM GMT	42% of the total memory in the server is free. 
+Jul 3, 2018 12:07:45 PM GMT	26% of the total memory in the server is free. 
+Jul 3, 2018 12:01:45 PM GMT	62% of the total memory in the server is free. 
+Jul 3, 2018 12:13:45 PM GMT	15% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: sshpass: unknown option -- o
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+ Size of /var/fedex: sshpass: unknown option -- o
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+ CPU Usage as reported on the server: sshpass: unknown option -- o
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
+
+ Checking logs for Jul  uptil current date
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jul 2, 2018 8:04:37 PM GMT	17% of the total memory in the server is free. 
+Jul 2, 2018 4:23:37 PM GMT	68% of the total memory in the server is free. 
+Jul 2, 2018 3:47:37 PM GMT	36% of the total memory in the server is free. 
+Jul 2, 2018 6:04:37 PM GMT	64% of the total memory in the server is free. 
+Jul 2, 2018 9:05:37 PM GMT	68% of the total memory in the server is free. 
+
+ ******************
+ Jul 3, 2018 9:24:38 AM GMT	36% of the total memory in the server is free. 
+Jul 3, 2018 12:44:37 AM GMT	47% of the total memory in the server is free. 
+Jul 3, 2018 3:59:37 AM GMT	13% of the total memory in the server is free. 
+Jul 3, 2018 4:31:37 AM GMT	35% of the total memory in the server is free. 
+Jul 3, 2018 9:18:38 AM GMT	47% of the total memory in the server is free. 
+ Jul 3, 2018 12:04:45 PM GMT	42% of the total memory in the server is free. 
+Jul 3, 2018 12:01:45 PM GMT	62% of the total memory in the server is free. 
+Jul 3, 2018 12:13:45 PM GMT	15% of the total memory in the server is free. 
+Jul 3, 2018 12:07:45 PM GMT	26% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+ CPU Usage as reported on the server: 4.0%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
+
+ Checking logs for Jul  uptil current date
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jul 2, 2018 11:19:37 PM GMT	25% of the total memory in the server is free. 
+Jul 2, 2018 10:26:37 PM GMT	60% of the total memory in the server is free. 
+Jul 2, 2018 10:59:37 PM GMT	23% of the total memory in the server is free. 
+Jul 2, 2018 3:50:37 PM GMT	16% of the total memory in the server is free. 
+Jul 2, 2018 10:33:37 PM GMT	24% of the total memory in the server is free. 
+
+ ******************
+ Jul 3, 2018 6:33:37 AM GMT	37% of the total memory in the server is free. 
+Jul 3, 2018 2:39:37 AM GMT	39% of the total memory in the server is free. 
+Jul 3, 2018 12:17:37 AM GMT	52% of the total memory in the server is free. 
+Jul 3, 2018 3:55:37 AM GMT	28% of the total memory in the server is free. 
+Jul 3, 2018 1:20:37 AM GMT	15% of the total memory in the server is free. 
+ Jul 3, 2018 12:07:45 PM GMT	26% of the total memory in the server is free. 
+Jul 3, 2018 12:04:45 PM GMT	42% of the total memory in the server is free. 
+Jul 3, 2018 12:13:45 PM GMT	15% of the total memory in the server is free. 
+Jul 3, 2018 12:01:45 PM GMT	62% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+ CPU Usage as reported on the server: 3.3%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
+
+ Checking logs for Jul  uptil current date
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jul 2, 2018 8:13:37 PM GMT	22% of the total memory in the server is free. 
+Jul 2, 2018 8:47:37 PM GMT	33% of the total memory in the server is free. 
+Jul 2, 2018 10:28:37 PM GMT	43% of the total memory in the server is free. 
+Jul 2, 2018 6:06:37 PM GMT	30% of the total memory in the server is free. 
+Jul 2, 2018 7:18:37 PM GMT	12% of the total memory in the server is free. 
+
+ ******************
+ Jul 3, 2018 6:10:37 AM GMT	39% of the total memory in the server is free. 
+Jul 3, 2018 3:50:37 AM GMT	57% of the total memory in the server is free. 
+Jul 3, 2018 5:17:37 AM GMT	15% of the total memory in the server is free. 
+Jul 3, 2018 1:52:37 AM GMT	25% of the total memory in the server is free. 
+Jul 3, 2018 5:51:37 AM GMT	61% of the total memory in the server is free. 
+ Jul 3, 2018 12:13:45 PM GMT	15% of the total memory in the server is free. 
+Jul 3, 2018 12:04:45 PM GMT	42% of the total memory in the server is free. 
+Jul 3, 2018 12:17:45 PM GMT	60% of the total memory in the server is free. 
+Jul 3, 2018 12:01:45 PM GMT	62% of the total memory in the server is free. 
+Jul 3, 2018 12:23:45 PM GMT	43% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 83%
+ CPU Usage as reported on the server: 0.7%
+
+ Exceptions generated for session:  java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+ java.lang.NullPointerException.
+java.lang.NullPointerException
+java.lang.NullPointerException
+
