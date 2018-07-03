@@ -37,31 +37,16 @@
 
  Checking logs for Jun 5 
  ******************
- Jun 5, 2018 9:50:11 AM GMT	20% of the total memory in the server is free. 
- Jun 5, 2018 3:33:11 PM GMT	75% of the total memory in the server is free. 
- Size of /opt/fedex: 55%
- Size of /var/fedex: 57%
- CPU Usage as reported on the server: 0%
+ 
+ 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 68%
 
-
- Checking logs for Jun 6 
+ Checking logs for Jun 12 
  ******************
- Jun 6, 2018 7:31:11 AM GMT	15% of the total memory in the server is free. 
- Jun 6, 2018 7:51:11 PM GMT	39% of the total memory in the server is free. 
- Size of /opt/fedex: 55%
- Size of /var/fedex: 57%
- CPU Usage as reported on the server: 0%
-
- Checking logs for Jun 7 
- ******************
- Jun 7, 2018 7:01:11 AM GMT	66% of the total memory in the server is free. 
- Jun 7, 2018 12:28:12 PM GMT	17% of the total memory in the server is free. 
- Size of /opt/fedex: 55%
- Size of /var/fedex: 57%
- CPU Usage as reported on the server: 0%
- Checking logs for Jun 5 
- ******************
- Logs already filled for Jun 5,
+ 
+ 
+ Size of /opt/fedex: 56%
 
  Checking logs for Jun  uptil current date
  ******************
@@ -73,44 +58,393 @@
  ******************
  Logs already filled for Jun 4,
  ******************
- Logs already filled for Jun 5,
- ******************
- Logs already filled for Jun 6,
- ******************
- Logs already filled for Jun 7,
- ******************
- Jun 8, 2018 6:42:12 AM GMT	29% of the total memory in the server is free. 
- Jun 8, 2018 7:56:12 PM GMT	31% of the total memory in the server is free. 
-
- ******************
- Jun 9, 2018 5:45:12 AM GMT	49% of the total memory in the server is free. 
- Jun 9, 2018 5:21:12 PM GMT	27% of the total memory in the server is free. 
-
- ******************
- Jun 10, 2018 5:00:10 AM GMT	64% of the total memory in the server is free. 
+ 
  
 
  ******************
- Size of /opt/fedex: 55%
- Size of /var/fedex: 59%
- CPU Usage as reported on the server: 0%
+ 
+ 
 
-
- Checking logs for Jun 10 
  ******************
  
- Jun 10, 2018 6:07:50 PM GMT	61% of the total memory in the server is free. 
- Size of /opt/fedex: 55%
- Size of /var/fedex: 60%
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jun 18, 2018 11:09:14 PM GMT	28% of the total memory in the server is free. 
+
+ ******************
+ Jun 19, 2018 10:54:14 AM GMT	58% of the total memory in the server is free. 
+ Jun 19, 2018 4:38:14 PM GMT	26% of the total memory in the server is free. 
+
+ ******************
+ Jun 20, 2018 10:15:10 AM GMT	53% of the total memory in the server is free. 
+ Jun 20, 2018 12:00:10 PM GMT	20% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 68%
+ CPU Usage as reported on the server: 3.0%
+
+
+ Checking logs for Jun 19 
+ ******************
+ Logs already filled for Jun 19,
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
  CPU Usage as reported on the server: 0.3%
 
 
- Checking logs for Jun 11 
+ Checking logs for Jun 19 
  ******************
- Jun 11, 2018 5:29:11 AM GMT	13% of the total memory in the server is free. 
+ Jun 19, 2018 9:17:14 AM GMT	52% of the total memory in the server is free. 
+Jun 19, 2018 9:59:14 AM GMT	25% of the total memory in the server is free. 
+Jun 19, 2018 2:14:14 AM GMT	20% of the total memory in the server is free. 
+ Jun 19, 2018 4:12:14 PM GMT	44% of the total memory in the server is free. 
+Jun 19, 2018 8:07:14 PM GMT	35% of the total memory in the server is free. 
+Jun 19, 2018 4:35:14 PM GMT	13% of the total memory in the server is free. 
+Jun 19, 2018 7:52:14 PM GMT	54% of the total memory in the server is free. 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
  
- Size of /opt/fedex: 55%
- Size of /var/fedex: 60%
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+ CPU Usage as reported on the server: 0.3%
+
+ Prod log file tmp/por_c0001413.log is missing
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+ CPU Usage as reported on the server: 0.7%
+
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jun 18, 2018 6:44:13 PM GMT	42% of the total memory in the server is free. 
+
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+ CPU Usage as reported on the server: 0.7%
+
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 18,
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+ CPU Usage as reported on the server: 7.3%
+
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 18,
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
  CPU Usage as reported on the server: 1.7%
 
 
@@ -124,65 +458,110 @@
  ******************
  Logs already filled for Jun 4,
  ******************
- Logs already filled for Jun 5,
- ******************
- Logs already filled for Jun 6,
- ******************
- Logs already filled for Jun 7,
- ******************
- Logs already filled for Jun 8,
- ******************
- Logs already filled for Jun 9,
- ******************
- Logs already filled for Jun 10,
- ******************
  
- Jun 11, 2018 3:20:10 PM GMT	50% of the total memory in the server is free. 
-
- ******************
- Jun 12, 2018 2:35:10 AM GMT	54% of the total memory in the server is free. 
  
 
  ******************
- Size of /opt/fedex: 55%
- Size of /var/fedex: 60%
- CPU Usage as reported on the server: 2.0%
-
-
- Checking logs for Jun  uptil current date
- ******************
- Logs already filled for Jun 1,
- ******************
- Logs already filled for Jun 2,
- ******************
- Logs already filled for Jun 3,
- ******************
- Logs already filled for Jun 4,
- ******************
- Logs already filled for Jun 5,
- ******************
- Logs already filled for Jun 6,
- ******************
- Logs already filled for Jun 7,
- ******************
- Logs already filled for Jun 8,
- ******************
- Logs already filled for Jun 9,
- ******************
- Logs already filled for Jun 10,
- ******************
- Logs already filled for Jun 11,
- ******************
  
- Jun 12, 2018 10:16:10 PM GMT	30% of the total memory in the server is free. 
-
- ******************
- Jun 13, 2018 12:46:10 AM GMT	33% of the total memory in the server is free. 
  
 
  ******************
- Size of /opt/fedex: 55%
- Size of /var/fedex: 62%
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 18,
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Jun 21, 2018 1:33:26 AM GMT	29% of the total memory in the server is free. 
+ 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+ CPU Usage as reported on the server: 3.3%
+
+
+ Checking logs for Jun 20 
+ ******************
+ Jun 20, 2018 1:11:10 AM GMT	76% of the total memory in the server is free. 
+ Jun 20, 2018 2:33:27 PM GMT	42% of the total memory in the server is free. 
+Jun 20, 2018 3:07:58 PM GMT	42% of the total memory in the server is free. 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
+ CPU Usage as reported on the server: 3.0%
+
+
+ Checking logs for Jun 21 
+ ******************
+ Jun 21, 2018 12:16:39 AM GMT	21% of the total memory in the server is free. 
+Jun 21, 2018 12:55:56 AM GMT	19% of the total memory in the server is free. 
+Jun 21, 2018 12:58:26 AM GMT	61% of the total memory in the server is free. 
+Jun 21, 2018 12:10:39 AM GMT	49% of the total memory in the server is free. 
+Jun 21, 2018 1:33:26 AM GMT	29% of the total memory in the server is free. 
+Jun 21, 2018 12:46:56 AM GMT	39% of the total memory in the server is free. 
+Jun 21, 2018 12:29:56 AM GMT	61% of the total memory in the server is free. 
+Jun 21, 2018 1:45:21 AM GMT	56% of the total memory in the server is free. 
+Jun 21, 2018 12:04:39 AM GMT	61% of the total memory in the server is free. 
+Jun 21, 2018 1:42:26 AM GMT	18% of the total memory in the server is free. 
+Jun 21, 2018 12:52:56 AM GMT	31% of the total memory in the server is free. 
+Jun 21, 2018 12:27:39 AM GMT	26% of the total memory in the server is free. 
+Jun 21, 2018 12:48:56 AM GMT	22% of the total memory in the server is free. 
+Jun 21, 2018 1:12:26 AM GMT	16% of the total memory in the server is free. 
+Jun 21, 2018 12:50:56 AM GMT	42% of the total memory in the server is free. 
+Jun 21, 2018 12:21:39 AM GMT	48% of the total memory in the server is free. 
+Jun 21, 2018 1:03:26 AM GMT	42% of the total memory in the server is free. 
+Jun 21, 2018 12:37:56 AM GMT	50% of the total memory in the server is free. 
+Jun 21, 2018 12:12:39 AM GMT	32% of the total memory in the server is free. 
+Jun 21, 2018 1:16:26 AM GMT	58% of the total memory in the server is free. 
+Jun 21, 2018 12:00:39 AM GMT	30% of the total memory in the server is free. 
+Jun 21, 2018 1:24:26 AM GMT	40% of the total memory in the server is free. 
+ 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 69%
  CPU Usage as reported on the server: 0.3%
 
 
@@ -196,31 +575,415 @@
  ******************
  Logs already filled for Jun 4,
  ******************
- Logs already filled for Jun 5,
- ******************
- Logs already filled for Jun 6,
- ******************
- Logs already filled for Jun 7,
- ******************
- Logs already filled for Jun 8,
- ******************
- Logs already filled for Jun 9,
- ******************
- Logs already filled for Jun 10,
- ******************
- Logs already filled for Jun 11,
- ******************
- Logs already filled for Jun 12,
- ******************
  
- Jun 13, 2018 9:26:11 PM GMT	22% of the total memory in the server is free. 
-
- ******************
- Jun 14, 2018 12:50:08 AM GMT	53% of the total memory in the server is free. 
  
 
  ******************
- Size of /opt/fedex: 55%
- Size of /var/fedex: 63%
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 18,
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Logs already filled for Jun 21,
+ ******************
+ Jun 22, 2018 7:39:38 AM GMT	63% of the total memory in the server is free. 
+ Jun 22, 2018 6:35:30 PM GMT	60% of the total memory in the server is free. 
+
+ ******************
+ Jun 23, 2018 4:07:30 AM GMT	56% of the total memory in the server is free. 
+ Jun 23, 2018 3:39:54 PM GMT	25% of the total memory in the server is free. 
+
+ ******************
+ Jun 24, 2018 5:10:11 AM GMT	49% of the total memory in the server is free. 
+ Jun 24, 2018 3:03:11 PM GMT	16% of the total memory in the server is free. 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 73%
+ CPU Usage as reported on the server: 0.3%
+
+ Prod log file tmp/por_c0001413.log is missing
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 73%
+
+ Checking logs for Jun 21 
+ ******************
+ Logs already filled for Jun 21,
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 73%
+ CPU Usage as reported on the server: 3.3%
+
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 18,
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Logs already filled for Jun 21,
+ ******************
+ Logs already filled for Jun 22,
+ ******************
+ Logs already filled for Jun 23,
+ ******************
+ Logs already filled for Jun 24,
+ ******************
+ 
+ Jun 25, 2018 3:37:37 PM GMT	25% of the total memory in the server is free. 
+
+ ******************
+ Jun 26, 2018 12:34:37 AM GMT	39% of the total memory in the server is free. 
+ 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 75%
+ CPU Usage as reported on the server: 3.0%
+
+
+ Checking logs for Jun 25 
+ ******************
+ 
+ Jun 25, 2018 2:08:37 PM GMT	50% of the total memory in the server is free. 
+Jun 25, 2018 4:06:37 PM GMT	50% of the total memory in the server is free. 
+Jun 25, 2018 7:56:37 PM GMT	28% of the total memory in the server is free. 
+Jun 25, 2018 6:44:37 PM GMT	23% of the total memory in the server is free. 
+Jun 25, 2018 6:14:37 PM GMT	35% of the total memory in the server is free. 
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 75%
+ CPU Usage as reported on the server: 3.0%
+
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Logs already filled for Jun 21,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jun 25, 2018 5:06:37 PM GMT	56% of the total memory in the server is free. 
+Jun 25, 2018 8:10:37 PM GMT	66% of the total memory in the server is free. 
+
+ ******************
+ Jun 26, 2018 9:43:38 AM GMT	38% of the total memory in the server is free. 
+Jun 26, 2018 6:34:38 AM GMT	59% of the total memory in the server is free. 
+Jun 26, 2018 8:34:38 AM GMT	31% of the total memory in the server is free. 
+Jun 26, 2018 6:39:38 AM GMT	30% of the total memory in the server is free. 
+ Jun 26, 2018 4:35:38 PM GMT	17% of the total memory in the server is free. 
+Jun 26, 2018 11:51:38 PM GMT	52% of the total memory in the server is free. 
+Jun 26, 2018 5:58:38 PM GMT	50% of the total memory in the server is free. 
+Jun 26, 2018 1:55:38 PM GMT	35% of the total memory in the server is free. 
+Jun 26, 2018 7:53:38 PM GMT	22% of the total memory in the server is free. 
+
+ ******************
+ Jun 27, 2018 12:38:38 AM GMT	18% of the total memory in the server is free. 
+Jun 27, 2018 3:46:38 AM GMT	34% of the total memory in the server is free. 
+Jun 27, 2018 12:34:38 AM GMT	29% of the total memory in the server is free. 
+Jun 27, 2018 2:04:38 AM GMT	15% of the total memory in the server is free. 
+Jun 27, 2018 4:01:38 AM GMT	33% of the total memory in the server is free. 
+ 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 75%
+ CPU Usage as reported on the server: 3.0%
+
+
+ Checking logs for Jun  uptil current date
+ ******************
+ Logs already filled for Jun 1,
+ ******************
+ Logs already filled for Jun 2,
+ ******************
+ Logs already filled for Jun 3,
+ ******************
+ Logs already filled for Jun 4,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ Logs already filled for Jun 19,
+ ******************
+ Logs already filled for Jun 20,
+ ******************
+ Logs already filled for Jun 21,
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ 
+
+ ******************
+ 
+ Jun 25, 2018 10:11:37 PM GMT	69% of the total memory in the server is free. 
+
+ ******************
+ Logs already filled for Jun 26,
+ ******************
+ Jun 27, 2018 8:59:12 AM GMT	42% of the total memory in the server is free. 
+Jun 27, 2018 9:31:12 AM GMT	53% of the total memory in the server is free. 
+ Jun 27, 2018 1:53:12 PM GMT	56% of the total memory in the server is free. 
+Jun 27, 2018 6:46:12 PM GMT	60% of the total memory in the server is free. 
+Jun 27, 2018 8:45:12 PM GMT	36% of the total memory in the server is free. 
+
+ ******************
+ Jun 28, 2018 1:12:56 AM GMT	59% of the total memory in the server is free. 
+Jun 28, 2018 5:27:12 AM GMT	40% of the total memory in the server is free. 
+Jun 28, 2018 12:34:04 AM GMT	64% of the total memory in the server is free. 
+Jun 28, 2018 12:06:22 AM GMT	35% of the total memory in the server is free. 
+Jun 28, 2018 12:48:04 AM GMT	27% of the total memory in the server is free. 
+ 
+
+ ******************
+ Size of /opt/fedex: 56%
+ Size of /var/fedex: 78%
  CPU Usage as reported on the server: 0.3%
 

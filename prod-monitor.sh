@@ -18,6 +18,8 @@
 # * year: Year for which logs need to be created
 # * prod-log-file-local: local copy of the latest prod logs
 PROD_LOG_FILE='por_c0001413.log'
+# Local archive of all logs on which processing is done
+PROD_LOG_ARCHIVE_FILE='por_c0001413_arch.log'
 PROD_ACCESS_USERNAME="sn470454"
 PROD_ACCESS_PWD="SkSkSk88"
 
@@ -30,11 +32,12 @@ PROD_LOG_TMP_DIR='tmp'
 LOCAL_LOG_TMP_DIR='log'
 FORCE_REFRESH='0'
 IS_DATE_SET='0'
-MAX_LOGS_PER_DAY='2'
+MAX_LOGS_PER_DAY='10'
 CUR_MONTH=` date | awk '{print \$2}' | sed 's/,//' `
 CUR_DATE_MONTH=` date | awk '{print \$3}' | sed 's/,//' `
 CUR_YEAR=`date | awk '{print \$4}' | sed 's/,//' `
 PROD_LOG_FILE_LOCAL=$PROD_LOG_TMP_DIR/$PROD_LOG_FILE
+PROD_LOG_FILE_LOCAL_ARCHIVE=$PROD_LOG_TMP_DIR/$PROD_LOG_ARCHIVE_FILE
 LOG_LOCAL_HISTORY_FILE="$LOCAL_LOG_TMP_DIR/archived-$CUR_MONTH-$CUR_YEAR.log"
 
 # Helpful indication for the user to use the script properly
@@ -93,41 +96,55 @@ echo -e " *******************************\n"
 # If this dir exists, then a log is in process. 
 if [ -d $PROD_LOG_TMP_DIR ]
     then
-        if [ ! $FORCE_REFRESH == '0' ]
-            then
-                echo " Force refresh enabled! Log file will be newly created" 
-                rm -rf $PROD_LOG_TMP_DIR
-                echo -e " Cleaning directory $PROD_LOG_TMP_DIR"
-                mkdir -p $PROD_LOG_TMP_DIR
-                echo -e " Created $PROD_LOG_TMP_DIR directory\n"
-        fi
+        echo -e " Prod log directory /$PROD_LOG_TMP_DIR exists"
     else
-        echo -e " No previous running instance of the script found."
+        echo -e " Prod log directory /$PROD_LOG_TMP_DIR does not exist"
         mkdir -p $PROD_LOG_TMP_DIR
-        echo -e " Created tmp directory\n"
+        echo -e " Created directory /$PROD_LOG_TMP_DIR"
 fi
 
-# Get current date and timm
-SYSTEM_DATE=$(sshpass -p $PROD_ACCESS_PWD ssh -o StrictHostKeyChecking=no $PROD_ACCESS_USERNAME@$PROD_URL date 2>&1)
-echo -e " System up and running as of $SYSTEM_DATE\n"
+# Touch the archive file just in case it doesn't exist
+touch $PROD_LOG_FILE_LOCAL_ARCHIVE
 
-# SCP the directory to /tmp/file
 if [ ! $FORCE_REFRESH == '0' ]
     then
+        # Get current date and timm
+        SYSTEM_DATE=$(sshpass -p $PROD_ACCESS_PWD ssh -o StrictHostKeyChecking=no $PROD_ACCESS_USERNAME@$PROD_URL date 2>&1)
+        echo -e " System up and running as of $SYSTEM_DATE\n"
+
+        echo " Force refresh enabled. Incoming log will be appended at $PROD_LOG_FILE_LOCAL " 
+        # SCP the directory to /tmp/file
         echo -e " Trying to scp log file into the output log directory"
         sshpass -p $PROD_ACCESS_PWD scp -o StrictHostKeyChecking=no $PROD_ACCESS_USERNAME@$PROD_URL:$PROD_LOG_DIR/$PROD_LOG_FILE $PROD_LOG_TMP_DIR
         echo -e " Successfully downloaded the log file\n"
     else   
-        echo -e " Reusing previous logs. Force flag disabled"
+        echo -e " Reusing previous logs. Force flag disabled\n"
+fi
+
+# By now the most recent log is at $PROD_LOG_LATEST_LOCAL. These contents should be merged with the
+# $PROD_LOG_ARCHIVE_FILE for further processing.
+if [ -f $PROD_LOG_FILE_LOCAL_ARCHIVE ]
+    then
+        echo -e " Merging $PROD_LOG_FILE_LOCAL into $PROD_LOG_FILE_LOCAL_ARCHIVE"
+        cat $PROD_LOG_FILE_LOCAL >> $PROD_LOG_FILE_LOCAL_ARCHIVE
+        # redirect output to null so it doesn't show up on console
+        {
+            sort $PROD_LOG_FILE_LOCAL_ARCHIVE | uniq | tee $PROD_LOG_FILE_LOCAL_ARCHIVE
+        } >/dev/null 2>&1
+        echo -e " Merging completed successfully.\n"
+    else
+        echo -e " Missing file $PROD_LOG_FILE_LOCAL_ARCHIVE"
+        echo -e " Terminating script.\n"
+        exit -1
 fi
 
 # Call the log script and pipe the output to a variable
 if [ ! $IS_DATE_SET -eq '1' ]
     then
-        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -y $CUR_YEAR -e $PROD_LOG_FILE_LOCAL)"
+        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -y $CUR_YEAR -e $PROD_LOG_ARCHIVE_FILE)"
         echo -e "$FORMATTED_LOG_VALUE" >> $LOG_LOCAL_HISTORY_FILE
     else
-        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -d $CUR_DATE_MONTH -y $CUR_YEAR -e $PROD_LOG_FILE_LOCAL)"
+        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -d $CUR_DATE_MONTH -y $CUR_YEAR -e $PROD_LOG_ARCHIVE_FILE)"
         echo -e "$FORMATTED_LOG_VALUE" >> $LOG_LOCAL_HISTORY_FILE
 fi
 echo -e " Displaying log results " 
@@ -153,4 +170,8 @@ CPU_USAGE=$(sshpass -p $PROD_ACCESS_PWD ssh -o StrictHostKeyChecking=no $PROD_AC
 echo -e " CPU Usage as reported on the server: $CPU_USAGE%\n"
 echo -e " CPU Usage as reported on the server: $CPU_USAGE%\n"  >> $LOG_LOCAL_HISTORY_FILE
 
-
+# check for common exceptions and report it to the 
+EXCEPTION_LOG=$(cat $PROD_LOG_FILE_LOCAL | grep -i -e NullPointerException -e ArithmaticException -e IndexOutOfBoundsException)
+echo -e " Exceptions generated for session: $EXCEPTION_LOG\n"
+echo -e " Exceptions generated for session: $EXCEPTION_LOG\n" >> $LOG_LOCAL_HISTORY_FILE
+echo -e ""

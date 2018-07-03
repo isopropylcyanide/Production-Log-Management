@@ -13,12 +13,12 @@
 # * prod-log-file-local: local copy of the latest prod logs
 
 # Find current date, month and time, if not passed in as options.
-MAX_LOGS_PER_DAY='2'
+MAX_LOGS_PER_DAY='10'
 CUR_MONTH=` date | awk '{print \$2}' | sed 's/,//' `
 CUR_DATE_MONTH=` date | awk '{print \$3}' | sed 's/,//' `
 IS_DATE_SET='0'
 CUR_YEAR=`date | awk '{print \$4}' | sed 's/,//' `
-PROD_LOG_FILE_LOCATION='tmp/por_c0001413.log'
+PROD_LOG_FILE_LOCATION='tmp/por_c0001413_arch.log'
 LOCAL_LOG_TMP_DIR='log'
 LOG_LOCAL_HISTORY_FILE="$LOCAL_LOG_TMP_DIR/archived-$CUR_MONTH-$CUR_YEAR.log"
 
