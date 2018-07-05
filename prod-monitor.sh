@@ -135,7 +135,7 @@ fi
 
 # By now the most recent log is at $PROD_LOG_LATEST_LOCAL. These contents should be merged with the
 # $PROD_LOG_ARCHIVE_FILE for further processing.
-if [ -f $PROD_LOG_FILE_LOCAL_ARCHIVE ] && [ $FORCE_REFRESH -ne '0' ]
+if [ -f $PROD_LOG_FILE_LOCAL_ARCHIVE ]
     then
         echo -e " Merging $PROD_LOG_FILE_LOCAL into $PROD_LOG_FILE_LOCAL_ARCHIVE"
         cat $PROD_LOG_FILE_LOCAL >> $PROD_LOG_FILE_LOCAL_ARCHIVE
