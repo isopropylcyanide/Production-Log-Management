@@ -150,13 +150,13 @@ if [ -f $PROD_LOG_FILE_LOCAL_ARCHIVE ]
         exit -1
 fi
 
-# Call the log script and pipe the output to a variable
+# Call the log script and pipe the output to a variable. Use the newly merged file for processing
 if [ ! $IS_DATE_SET -eq '1' ]
     then
-        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -y $CUR_YEAR -e $PROD_LOG_ARCHIVE_FILE)"
+        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -y $CUR_YEAR -e $PROD_LOG_FILE_LOCAL_ARCHIVE)"
         echo -e "$FORMATTED_LOG_VALUE" >> $LOG_LOCAL_HISTORY_FILE
     else
-        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -d $CUR_DATE_MONTH -y $CUR_YEAR -e $PROD_LOG_ARCHIVE_FILE)"
+        FORMATTED_LOG_VALUE="$(bash prod-monitor-filter.sh -l $MAX_LOGS_PER_DAY -m $CUR_MONTH -d $CUR_DATE_MONTH -y $CUR_YEAR -e $PROD_LOG_FILE_LOCAL_ARCHIVE)"
         echo -e "$FORMATTED_LOG_VALUE" >> $LOG_LOCAL_HISTORY_FILE
 fi
 echo -e " Displaying log results " 
@@ -182,7 +182,8 @@ CPU_USAGE=$(sshpass -p $PROD_ACCESS_PWD ssh -o StrictHostKeyChecking=no $PROD_AC
 echo -e " CPU Usage as reported on the server: $CPU_USAGE%\n"
 echo -e " CPU Usage as reported on the server: $CPU_USAGE%\n"  >> $LOG_LOCAL_HISTORY_FILE
 
-# check for common exceptions and report it to the 
+# check for common exceptions. This should be from the (latest log
+# and not the merged log) and report it to the 
 EXCEPTION_LOG=$(cat $PROD_LOG_FILE_LOCAL | grep -i -e NullPointerException -e ArithmaticException -e IndexOutOfBoundsException)
 echo -e " Exceptions generated for session: $EXCEPTION_LOG\n"
 echo -e " Exceptions generated for session: $EXCEPTION_LOG\n" >> $LOG_LOCAL_HISTORY_FILE
